@@ -16,8 +16,9 @@ Now play with Jupyter lab on localhost:8888 !
 ## Build your own image.
 
 ```
-$ cd jupyspark; ls
+$ cd jupyspark/build/docker; ls
 Dockerfile    entrypoint.sh
 $ docker build -t jupyspark:custom -f ./Dockerfile .
+$ cd -
 $ docker run -it -d --name jupyspark -p 8888:8888 -v `pwd`/workspace:/root/workspace jupyspark:custom bash
 ```
