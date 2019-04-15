@@ -35,7 +35,7 @@ RUN /bin/bash --login -c 'conda update -n base -c defaults conda'
 # Install PySpark, Jupyterlab, Python hdfs
 RUN /bin/bash --login -c 'conda create -n python35 python=3.5'
 RUN /bin/bash --login -c 'conda activate python35 \
-    && conda install -y -c conda-forge py4j jupyterlab \
+    && conda install -y -c conda-forge pyspark py4j jupyterlab \
     && conda clean -tipy'
 
 #RUN mkdir /lab
